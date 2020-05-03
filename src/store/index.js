@@ -1,29 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  plugins: [createPersistedState()],
   state: {
     modalVisible: false,
-    taskList: {
-      task0: {
-        name: 'First Task',
-        todos: {
-          todo0: {
-            name: 'First Todo',
-            done: false
-          },
-          todo1: {
-            name: 'Second Todo',
-            done: true
-          }
-        }
-      }
-    }
+    taskList: {}
   },
   mutations: {
-    toggleModal: (state, id) => {
+    toggleModal: (state) => {
       state.modalVisible = !state.modalVisible
       console.log(`Modal toggled!`)
     },
