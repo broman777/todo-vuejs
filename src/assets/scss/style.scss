@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: inside;
+}
+
+input, .form-group {
+  width: 100%;
+}
+
+#app {
+  max-width: 600px;
+  margin: 24px auto;
+}
+
+.flexbox {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.centered {
+  justify-content: center;
+}
+
+.top {
+  margin-bottom: 12px;
+}
+
+.actions {
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  &.alone {
+    margin-top: 12px;
+    .actions__link:first-child{
+      margin-left: 0;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #000;
+    min-width: 24px;
+    padding: 0 12px;
+    border-radius: 12px;
+    margin-left: 6px;
+    text-decoration: none;
+    font: 12px/24px sans-serif;
+    cursor: pointer;
+    background-color: #eee;
+    color: #000;
+    transition: 0.2s ease;
+    outline: none;
+    &:hover {
+      background-color: lime;
+    }
+  }
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+input {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid #000;
+  min-width: 24px;
+  height: 26px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  font: 12px sans-serif;
+  cursor: pointer;
+  background-color: #eee;
+  color: #000;
+  transition: 0.2s ease;
+  outline: none;
+}
